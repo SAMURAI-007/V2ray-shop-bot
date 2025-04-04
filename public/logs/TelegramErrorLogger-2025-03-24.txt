@@ -1,0 +1,365 @@
+============[Date]============
+[ 2025-03-24 08:01:19  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(66): Telegram->sendMessage(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-24 08:02:03  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(66): Telegram->sendMessage(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-24 09:23:40  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: can't parse inline keyboard button: Field "text" must be of type String
+=========[Sent Data]==========
+[ref]
+ref.update_id= 315345231
+ref.callback_query.id= 5952757561217684434
+ref.callback_query.from.id= 1385984374
+ref.callback_query.from.is_bot= false
+ref.callback_query.from.first_name= AZGALOR
+ref.callback_query.from.username= A_develop
+ref.callback_query.from.language_code= en
+ref.callback_query.message.message_id= 86
+ref.callback_query.message.from.id= 7740557476
+ref.callback_query.message.from.is_bot= true
+ref.callback_query.message.from.first_name= NayaVPN
+ref.callback_query.message.from.username= nayavpn_shopbot
+ref.callback_query.message.chat.id= 1385984374
+ref.callback_query.message.chat.first_name= AZGALOR
+ref.callback_query.message.chat.username= A_develop
+ref.callback_query.message.chat.type= private
+ref.callback_query.message.date= 1742804413
+ref.callback_query.message.text= Welcome ! Lets start the bot
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.text= Start
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.callback_data= /home
+ref.callback_query.chat_instance= -7760337884434488502
+ref.callback_query.data= /home
+
+
+[ref]
+ref.reply_markup= {"inline_keyboard":[[{"text":"\ud83c\udf10 \u06a9\u0627\u0646\u0641\u06cc\u06a9 \u0647\u0627\u06cc \u0645\u0646","callback_data":"\/user_subs"},{"text":"\ud83d\udcb5 \u06a9\u06cc\u0641 \u067e\u0648\u0644","callback_data":"\/user_wallet"}],[{"text":"\ud83d\udcb2 \u062e\u0631\u06cc\u062f \u0648\u06cc \u067e\u06cc \u0627\u0646","callback_data":"\/buy_sub"},{"text":"\ud83d\udcb0 \u06a9\u0633\u0628 \u062f\u0631\u0622\u0645\u062f","callback_data":"\/refferal"}],[{"text":null,"callback_data":"\/support"}]]}
+ref.text= سلام , به بات فروش نایا وی پی ان خوش اومدی ! چه کاری میتونم برات انجام بدم؟
+ref.message_id= 86
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(692): Telegram->endpoint('editMessageText', Array)
+#3 C:\xampp\htdocs\public\index.php(60): Telegram->editMessageText(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-24 09:24:29  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: can't parse inline keyboard button: Field "text" must be of type String
+=========[Sent Data]==========
+[ref]
+ref.update_id= 315345233
+ref.callback_query.id= 5952757562879845629
+ref.callback_query.from.id= 1385984374
+ref.callback_query.from.is_bot= false
+ref.callback_query.from.first_name= AZGALOR
+ref.callback_query.from.username= A_develop
+ref.callback_query.from.language_code= en
+ref.callback_query.message.message_id= 88
+ref.callback_query.message.from.id= 7740557476
+ref.callback_query.message.from.is_bot= true
+ref.callback_query.message.from.first_name= NayaVPN
+ref.callback_query.message.from.username= nayavpn_shopbot
+ref.callback_query.message.chat.id= 1385984374
+ref.callback_query.message.chat.first_name= AZGALOR
+ref.callback_query.message.chat.username= A_develop
+ref.callback_query.message.chat.type= private
+ref.callback_query.message.date= 1742804454
+ref.callback_query.message.text= Welcome ! Lets start the bot
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.text= Start
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.callback_data= /home
+ref.callback_query.chat_instance= -7760337884434488502
+ref.callback_query.data= /home
+
+
+[ref]
+ref.reply_markup= {"inline_keyboard":[[{"text":"\ud83c\udf10 \u06a9\u0627\u0646\u0641\u06cc\u06a9 \u0647\u0627\u06cc \u0645\u0646","callback_data":"\/user_subs"},{"text":"\ud83d\udcb5 \u06a9\u06cc\u0641 \u067e\u0648\u0644","callback_data":"\/user_wallet"}],[{"text":"\ud83d\udcb2 \u062e\u0631\u06cc\u062f \u0648\u06cc \u067e\u06cc \u0627\u0646","callback_data":"\/buy_sub"},{"text":"\ud83d\udcb0 \u06a9\u0633\u0628 \u062f\u0631\u0622\u0645\u062f","callback_data":"\/refferal"}],[{"text":null,"callback_data":"\/support"}]]}
+ref.text= سلام , به بات فروش نایا وی پی ان خوش اومدی ! چه کاری میتونم برات انجام بدم؟
+ref.message_id= 88
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(692): Telegram->endpoint('editMessageText', Array)
+#3 C:\xampp\htdocs\public\index.php(62): Telegram->editMessageText(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-24 09:25:22  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: can't parse inline keyboard button: Field "text" must be of type String
+=========[Sent Data]==========
+[ref]
+ref.update_id= 315345235
+ref.callback_query.id= 5952757562056361606
+ref.callback_query.from.id= 1385984374
+ref.callback_query.from.is_bot= false
+ref.callback_query.from.first_name= AZGALOR
+ref.callback_query.from.username= A_develop
+ref.callback_query.from.language_code= en
+ref.callback_query.message.message_id= 90
+ref.callback_query.message.from.id= 7740557476
+ref.callback_query.message.from.is_bot= true
+ref.callback_query.message.from.first_name= NayaVPN
+ref.callback_query.message.from.username= nayavpn_shopbot
+ref.callback_query.message.chat.id= 1385984374
+ref.callback_query.message.chat.first_name= AZGALOR
+ref.callback_query.message.chat.username= A_develop
+ref.callback_query.message.chat.type= private
+ref.callback_query.message.date= 1742804506
+ref.callback_query.message.text= Welcome ! Lets start the bot
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.text= Start
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.callback_data= /home
+ref.callback_query.chat_instance= -7760337884434488502
+ref.callback_query.data= /home
+
+
+[ref]
+ref.reply_markup= {"inline_keyboard":[[{"text":"\ud83c\udf10 \u06a9\u0627\u0646\u0641\u06cc\u06a9 \u0647\u0627\u06cc \u0645\u0646","callback_data":"\/user_subs"},{"text":"\ud83d\udcb5 \u06a9\u06cc\u0641 \u067e\u0648\u0644","callback_data":"\/user_wallet"}],[{"text":"\ud83d\udcb2 \u062e\u0631\u06cc\u062f \u0648\u06cc \u067e\u06cc \u0627\u0646","callback_data":"\/buy_sub"},{"text":"\ud83d\udcb0 \u06a9\u0633\u0628 \u062f\u0631\u0622\u0645\u062f","callback_data":"\/refferal"}],[{"text":null,"callback_data":"\/support"}]]}
+ref.text= سلام , به بات فروش نایا وی پی ان خوش اومدی ! چه کاری میتونم برات انجام بدم؟
+ref.message_id= 90
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(692): Telegram->endpoint('editMessageText', Array)
+#3 C:\xampp\htdocs\public\index.php(62): Telegram->editMessageText(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-24 09:26:38  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: can't parse inline keyboard button: Field "text" must be of type String
+=========[Sent Data]==========
+[ref]
+ref.update_id= 315345236
+ref.callback_query.id= 5952757560046571916
+ref.callback_query.from.id= 1385984374
+ref.callback_query.from.is_bot= false
+ref.callback_query.from.first_name= AZGALOR
+ref.callback_query.from.username= A_develop
+ref.callback_query.from.language_code= en
+ref.callback_query.message.message_id= 90
+ref.callback_query.message.from.id= 7740557476
+ref.callback_query.message.from.is_bot= true
+ref.callback_query.message.from.first_name= NayaVPN
+ref.callback_query.message.from.username= nayavpn_shopbot
+ref.callback_query.message.chat.id= 1385984374
+ref.callback_query.message.chat.first_name= AZGALOR
+ref.callback_query.message.chat.username= A_develop
+ref.callback_query.message.chat.type= private
+ref.callback_query.message.date= 1742804506
+ref.callback_query.message.text= Welcome ! Lets start the bot
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.text= Start
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.callback_data= /home
+ref.callback_query.chat_instance= -7760337884434488502
+ref.callback_query.data= /home
+
+
+[ref]
+ref.reply_markup= {"inline_keyboard":[[{"text":"\ud83c\udf10 \u06a9\u0627\u0646\u0641\u06cc\u06a9 \u0647\u0627\u06cc \u0645\u0646","callback_data":"\/user_subs"},{"text":"\ud83d\udcb5 \u06a9\u06cc\u0641 \u067e\u0648\u0644","callback_data":"\/user_wallet"}],[{"text":"\ud83d\udcb2 \u062e\u0631\u06cc\u062f \u0648\u06cc \u067e\u06cc \u0627\u0646","callback_data":"\/buy_sub"},{"text":"\ud83d\udcb0 \u06a9\u0633\u0628 \u062f\u0631\u0622\u0645\u062f","callback_data":"\/refferal"}],[{"text":null,"callback_data":"\/support"}]]}
+ref.text= سلام , به بات فروش نایا وی پی ان خوش اومدی ! چه کاری میتونم برات انجام بدم؟
+ref.message_id= 90
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(692): Telegram->endpoint('editMessageText', Array)
+#3 C:\xampp\htdocs\public\index.php(63): Telegram->editMessageText(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-24 09:27:15  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: can't parse inline keyboard button: Field "text" must be of type String
+=========[Sent Data]==========
+[ref]
+ref.update_id= 315345237
+ref.callback_query.id= 5952757561140236130
+ref.callback_query.from.id= 1385984374
+ref.callback_query.from.is_bot= false
+ref.callback_query.from.first_name= AZGALOR
+ref.callback_query.from.username= A_develop
+ref.callback_query.from.language_code= en
+ref.callback_query.message.message_id= 90
+ref.callback_query.message.from.id= 7740557476
+ref.callback_query.message.from.is_bot= true
+ref.callback_query.message.from.first_name= NayaVPN
+ref.callback_query.message.from.username= nayavpn_shopbot
+ref.callback_query.message.chat.id= 1385984374
+ref.callback_query.message.chat.first_name= AZGALOR
+ref.callback_query.message.chat.username= A_develop
+ref.callback_query.message.chat.type= private
+ref.callback_query.message.date= 1742804506
+ref.callback_query.message.text= Welcome ! Lets start the bot
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.text= Start
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.callback_data= /home
+ref.callback_query.chat_instance= -7760337884434488502
+ref.callback_query.data= /home
+
+
+[ref]
+ref.reply_markup= {"inline_keyboard":[[{"text":"\ud83c\udf10 \u06a9\u0627\u0646\u0641\u06cc\u06a9 \u0647\u0627\u06cc \u0645\u0646","callback_data":"\/user_subs"},{"text":"\ud83d\udcb5 \u06a9\u06cc\u0641 \u067e\u0648\u0644","callback_data":"\/user_wallet"}],[{"text":"\ud83d\udcb2 \u062e\u0631\u06cc\u062f \u0648\u06cc \u067e\u06cc \u0627\u0646","callback_data":"\/buy_sub"},{"text":"\ud83d\udcb0 \u06a9\u0633\u0628 \u062f\u0631\u0622\u0645\u062f","callback_data":"\/refferal"}],[{"text":false,"callback_data":"\/support"}]]}
+ref.text= سلام , به بات فروش نایا وی پی ان خوش اومدی ! چه کاری میتونم برات انجام بدم؟
+ref.message_id= 90
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(692): Telegram->endpoint('editMessageText', Array)
+#3 C:\xampp\htdocs\public\index.php(63): Telegram->editMessageText(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-24 10:04:07  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: can't parse inline keyboard button: Field "text" must be of type String
+=========[Sent Data]==========
+[ref]
+ref.update_id= 315345255
+ref.callback_query.id= 5952757561671776693
+ref.callback_query.from.id= 1385984374
+ref.callback_query.from.is_bot= false
+ref.callback_query.from.first_name= AZGALOR
+ref.callback_query.from.username= A_develop
+ref.callback_query.from.language_code= en
+ref.callback_query.message.message_id= 124
+ref.callback_query.message.from.id= 7740557476
+ref.callback_query.message.from.is_bot= true
+ref.callback_query.message.from.first_name= NayaVPN
+ref.callback_query.message.from.username= nayavpn_shopbot
+ref.callback_query.message.chat.id= 1385984374
+ref.callback_query.message.chat.first_name= AZGALOR
+ref.callback_query.message.chat.username= A_develop
+ref.callback_query.message.chat.type= private
+ref.callback_query.message.date= 1742806775
+ref.callback_query.message.text= Welcome ! Lets start the bot
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.text= Start
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.callback_data= /home
+ref.callback_query.chat_instance= -7760337884434488502
+ref.callback_query.data= /home
+
+
+[ref]
+ref.reply_markup= {"inline_keyboard":[[{"text":"\ud83c\udf10 \u0627\u06a9\u0627\u0646\u062a \u0645\u0646","callback_data":"\/user_ac"},{"text":"\ud83d\udcb5 \u06a9\u06cc\u0641 \u067e\u0648\u0644","callback_data":"\/user_wallet"}],[{"text":"\ud83d\udcb2 \u062e\u0631\u06cc\u062f \u0648\u06cc \u067e\u06cc \u0627\u0646","callback_data":"\/buy_sub"},{"text":"\ud83d\udcb0 \u06a9\u0633\u0628 \u062f\u0631\u0622\u0645\u062f","callback_data":"\/refferal"}],[{"text":{"id":22,"username":"AZGALOR","chat_id":"1385984374","is_ref":null,"refs":null,"ref_id":"27719687"},"callback_data":"\/support"}]]}
+ref.text= سلام , به بات فروش نایا وی پی ان خوش اومدی ! چه کاری میتونم برات انجام بدم؟
+ref.message_id= 124
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(692): Telegram->endpoint('editMessageText', Array)
+#3 C:\xampp\htdocs\public\index.php(65): Telegram->editMessageText(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-24 12:04:02  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+curl_error_code:		35
+curl_error:		OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to api.telegram.org:443 
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(77): Telegram->sendMessage(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-24 16:46:15  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(77): Telegram->sendMessage(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-24 16:46:22  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(77): Telegram->sendMessage(Array)
+#4 {main}
+

@@ -1,0 +1,95 @@
+============[Date]============
+[ 2025-03-26 17:11:43  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(82): Telegram->sendMessage(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-26 17:28:03  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(93): Telegram->sendMessage(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-26 17:28:10  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(93): Telegram->sendMessage(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-26 17:41:02  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(112): Telegram->sendMessage(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-26 17:41:14  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(112): Telegram->sendMessage(Array)
+#4 {main}
+

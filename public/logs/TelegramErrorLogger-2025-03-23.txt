@@ -1,0 +1,94 @@
+============[Date]============
+[ 2025-03-23 11:27:54  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(70): Telegram->sendMessage(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-23 11:28:27  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(70): Telegram->sendMessage(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-03-23 11:33:17  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message text is empty
+=========[Sent Data]==========
+[ref]
+ref.update_id= 315345195
+ref.callback_query.id= 5952757563171459254
+ref.callback_query.from.id= 1385984374
+ref.callback_query.from.is_bot= false
+ref.callback_query.from.first_name= AZGALOR
+ref.callback_query.from.username= A_develop
+ref.callback_query.from.language_code= en
+ref.callback_query.message.message_id= 31
+ref.callback_query.message.from.id= 7740557476
+ref.callback_query.message.from.is_bot= true
+ref.callback_query.message.from.first_name= NayaVPN
+ref.callback_query.message.from.username= nayavpn_shopbot
+ref.callback_query.message.chat.id= 1385984374
+ref.callback_query.message.chat.first_name= AZGALOR
+ref.callback_query.message.chat.username= A_develop
+ref.callback_query.message.chat.type= private
+ref.callback_query.message.date= 1742720794
+ref.callback_query.message.edit_date= 1742720795
+ref.callback_query.message.text= سلام, چه کاری میتونم برات انجام بدم رفیق؟
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.text= 👤 اکانت من
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.callback_data= /user_ac
+ref.callback_query.message.reply_markup.inline_keyboard.0.1.text= 💵 کیف پول
+ref.callback_query.message.reply_markup.inline_keyboard.0.1.callback_data= /user_wallet
+ref.callback_query.message.reply_markup.inline_keyboard.1.0.text= 💲 خرید وی پی ان
+ref.callback_query.message.reply_markup.inline_keyboard.1.0.callback_data= /buy_sub
+ref.callback_query.message.reply_markup.inline_keyboard.1.1.text= 💰 کسب درآمد
+ref.callback_query.message.reply_markup.inline_keyboard.1.1.callback_data= /refferal
+ref.callback_query.message.reply_markup.inline_keyboard.2.0.text= 🌐 کانفیک های من
+ref.callback_query.message.reply_markup.inline_keyboard.2.0.callback_data= /user_subs
+ref.callback_query.message.reply_markup.inline_keyboard.2.1.text= 💠 پشتیبانی
+ref.callback_query.message.reply_markup.inline_keyboard.2.1.callback_data= /support
+ref.callback_query.message.reply_markup.inline_keyboard.2.2.text= 💬 ارتباط با نورزاد
+ref.callback_query.message.reply_markup.inline_keyboard.2.2.callback_data= /Noorzad
+ref.callback_query.chat_instance= -7760337884434488502
+ref.callback_query.data= /user_ac
+
+
+[ref]
+ref.text= 
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(65): Telegram->sendMessage(Array)
+#4 {main}
+
