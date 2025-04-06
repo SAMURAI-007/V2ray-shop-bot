@@ -1,0 +1,96 @@
+============[Date]============
+[ 2025-04-06 10:15:44  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(474): Telegram->sendMessage(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-04-06 10:15:55  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(474): Telegram->sendMessage(Array)
+#4 {main}
+
+============[Date]============
+[ 2025-04-06 10:19:42  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+=========[Sent Data]==========
+[ref]
+ref.update_id= 315345484
+ref.callback_query.id= 5952757562147156500
+ref.callback_query.from.id= 1385984374
+ref.callback_query.from.is_bot= false
+ref.callback_query.from.first_name= AZGALOR
+ref.callback_query.from.username= A_develop
+ref.callback_query.from.language_code= fa
+ref.callback_query.message.message_id= 196
+ref.callback_query.message.from.id= 7740557476
+ref.callback_query.message.from.is_bot= true
+ref.callback_query.message.from.first_name= NayaVPN
+ref.callback_query.message.from.username= nayavpn_shopbot
+ref.callback_query.message.chat.id= 1385984374
+ref.callback_query.message.chat.first_name= AZGALOR
+ref.callback_query.message.chat.username= A_develop
+ref.callback_query.message.chat.type= private
+ref.callback_query.message.date= 1743927569
+ref.callback_query.message.edit_date= 1743927572
+ref.callback_query.message.text= سلام , به بات فروش نایا وی پی ان خوش اومدی ! چه کاری میتونم برات انجام بدم؟
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.text= 🌐 اکانت من
+ref.callback_query.message.reply_markup.inline_keyboard.0.0.callback_data= /user_ac
+ref.callback_query.message.reply_markup.inline_keyboard.0.1.text= 💵 کیف پول
+ref.callback_query.message.reply_markup.inline_keyboard.0.1.callback_data= /user_wallet
+ref.callback_query.message.reply_markup.inline_keyboard.1.0.text= 💲 خرید وی پی ان
+ref.callback_query.message.reply_markup.inline_keyboard.1.0.callback_data= /buy_sub
+ref.callback_query.message.reply_markup.inline_keyboard.1.1.text= 💰 کسب درآمد
+ref.callback_query.message.reply_markup.inline_keyboard.1.1.callback_data= /refferal
+ref.callback_query.message.reply_markup.inline_keyboard.2.0.text= 💠 پشتیبانی
+ref.callback_query.message.reply_markup.inline_keyboard.2.0.url= https://t.me//NayaVPN_Support
+ref.callback_query.chat_instance= -7760337884434488502
+ref.callback_query.data= /buy_sub
+
+
+[ref]
+ref.reply_markup= {"inline_keyboard":[[{"text":"5GB , 1 MONTH","callback_data":"\/5G1M"},{"text":"10GB , 1 MONTH","callback_data":"\/10G1M"}],[{"text":"25GB , 1 MONTH","callback_data":"\/25G1M"},{"text":"50GB , 1 MONTH","callback_data":"\/50G1M"}],[{"text":"60GB , 2 MONTH","callback_data":"\/60G2M"},{"text":"100GB , 2 MONTH","callback_data":"\/100G2M"}],[{"text":"120GB , 3 MONTH","callback_data":"\/120G3M"},{"text":"200GB , 3 MONTH","callback_data":"\/200G3M"}],[{"text":"\ud83d\ude80 \u067e\u0644\u0646 \u0633\u0641\u0627\u0631\u0634\u06cc","callback_data":"\/custom_sub"}],[{"text":"\ud83d\udd19 \u0628\u0627\u0632\u06af\u0634\u062a","callback_data":"\/home"}]]}
+ref.text= خرید کانفیگ جدید 💵
+
+پلن های زیر , پلن های پیشنهادی نایا وی پی ان هستن. شما همچنین میتونید پلن دلخواه خودتون رو از طریق دکمه پلن سفارشی بسازید!
+
+انتخاب پلن 👇
+ref.message_id= 196
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(692): Telegram->endpoint('editMessageText', Array)
+#3 C:\xampp\htdocs\public\index.php(267): Telegram->editMessageText(Array)
+#4 {main}
+

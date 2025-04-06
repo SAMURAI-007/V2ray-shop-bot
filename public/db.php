@@ -22,6 +22,13 @@ class DB
         return $stmt->fetch(PDO::FETCH_OBJ);
     }
 
+    public function getAllUsers()
+    {
+        $stmt = $this->db->prepare("SELECT * FROM users");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
     public function createUser($username, $chat_id)
     {
         $ref_id = intval($chat_id * 2 / 100);
@@ -157,6 +164,13 @@ class DB
     public function deleteWallet()
     {
         $stmt = $this->db->prepare("DELETE FROM wallet");
+        $stmt->execute();
+    }
+
+    public function deleteSub($sub_id)
+    {
+        $stmt = $this->db->prepare("DELETE FROM subs WHERE id = :sub_id");
+        $stmt->bindParam(':sub_id', $sub_id);
         $stmt->execute();
     }
 }

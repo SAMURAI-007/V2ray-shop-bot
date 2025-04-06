@@ -49,6 +49,7 @@ if ($text == "/start") {
 
     $content = array('chat_id' => $chat_id, 'text' => 'Welcome ! Lets start the bot', 'reply_markup' => $keyb);
     $telegram->sendMessage($content);
+
 }
 
 if ($text == "/home") {
@@ -227,7 +228,7 @@ if ($text == "/user_subs") {
 
     if (isset($subs)) {
         foreach ($subs as $sub) {
-            $content .= '💳 پلن شما : ' . $sub->sub_url . "\n" . '📅 تاریخ انقضا : ' . date('Y-m-d H:i:s', $sub->exp_date) . "\n\n".var_dump($sub);
+            $content .= '💳 پلن شما : ' . $sub->sub_url . "\n\n" . '📅 تاریخ انقضا : ' . date('Y-m-d H:i:s', $sub->exp_date) . "\n".'حجم :'.$sub->data_limit."\n\n"."";
         }
     } else {
         $content = 'شما هیچ کانفیگی ندارید.';
@@ -291,7 +292,7 @@ if ($text == "/10G1M") {
 
     $option = array(
         //First row
-        array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_10G1M')),
+        array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_confirm_10g1m')),
         //Second row
         array($telegram->buildInlineKeyBoardButton('🔙 بازگشت', '', '/buy_sub'))
     );
@@ -309,7 +310,7 @@ if ($text == "/25G1M") {
 
     $option = array(
         //First row
-        array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_25G1M')),
+        array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_confirm_25g1m')),
         //Second row
         array($telegram->buildInlineKeyBoardButton('🔙 بازگشت', '', '/buy_sub'))
     );
@@ -327,7 +328,7 @@ if ($text == "/50G1M") {
 
     $option = array(
         //First row
-        array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_50G1M')),
+        array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_confirm_50g1m')),
         //Second row
         array($telegram->buildInlineKeyBoardButton('🔙 بازگشت', '', '/buy_sub'))
     );
@@ -345,7 +346,7 @@ if ($text == "/60G2M") {
 
     $option = array(
         //First row
-        array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_60G2M')),
+        array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_confirm_60g2m')),
         //Second row
         array($telegram->buildInlineKeyBoardButton('🔙 بازگشت', '', '/buy_sub'))
     );
@@ -363,7 +364,7 @@ if ($text == "/100G2M") {
 
     $option = array(
         //First row
-        array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_100G2M')),
+        array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_confirm_100g2m')),
         //Second row
         array($telegram->buildInlineKeyBoardButton('🔙 بازگشت', '', '/buy_sub'))
     );
@@ -381,7 +382,7 @@ if ($text == "/120G3M") {
 
     $option = array(
         //First row
-        array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_120G3M')),
+        array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_confirm_120g3m')),
         //Second row
         array($telegram->buildInlineKeyBoardButton('🔙 بازگشت', '', '/buy_sub'))
     );
@@ -399,7 +400,7 @@ if ($text == "/200G3M") {
 
     $option = array(
         //First row
-        array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_200G3M')),
+        array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_confirm_200g3m')),
         //Second row
         array($telegram->buildInlineKeyBoardButton('🔙 بازگشت', '', '/buy_sub'))
     );
@@ -411,42 +412,6 @@ if ($text == "/200G3M") {
         'message_id' => $result['callback_query']['message']['message_id']
     );
     $telegram->editMessageText($content);
-}
-
-if ($text == "/buy_confirm_5g1m") {
-    $validCommand = true;
-    $g = 5;
-    $m = 1;
-    $e = $m * time() + 60 * 60 * 24 * 30;
-    $new = new DB($db);
-    $user = $new->getUser($chat_id);
-    $wallet = $new->getWallet($user->id);
-    $price = 0 * $g; // Assuming 10000 Toman for 5GB
-    if ($wallet->balance >= $price) {
-
-        $new->updateWallet($user->id, $wallet->balance - $price, time(), $price);
-
-        $new->createSub($user->id, $user->username, $g, $e);
-
-
-        $option = array(
-            //First row
-            array($telegram->buildInlineKeyBoardButton('💵 خرید', '', '/buy_confirm' . "?g=5&m=1")),
-            //Second row
-            array($telegram->buildInlineKeyBoardButton('🔙 بازگشت', '', '/buy_sub'))
-        );
-        $keyb = $telegram->buildInlineKeyBoard($option);
-        $content = array(
-            'chat_id' => $chat_id,
-            'reply_markup' => $keyb,
-            'text' => 'خرید شما با موفقیت انجام شد.' . "\n" . 'مبلغ : ' . $price . ' تومان' . "\n" . 'پلن : ' . $g . ' گیگابایت , ' . $m . ' ماهه' . "\n" . 'تاریخ انقضا : ' . date('Y-m-d H:i:s', time() + 60 * 60 * 24 * 30 * $m),
-            'message_id' => $result['callback_query']['message']['message_id']
-        );
-        $telegram->editMessageText($content);
-    } else {
-        $content = array('chat_id' => $chat_id, 'text' => 'موجودی کیف پول شما کافی نیست.' . "\n" . 'لطفا از منوی کیف پول اقدام به افزایش اعتبار کنید.', 'message_id' => $result['callback_query']['message']['message_id']);
-        $telegram->editMessageText($content);
-    }
 }
 
 
@@ -470,6 +435,45 @@ if ($text == "/custom_sub") {
 }
 
 if (!$validCommand) {
+
+    if (str_contains($text, "/buy_confirm_")) {
+        $validCommand = true;
+        preg_match('/\/buy_confirm_(\d+)g(\d+)m/', $text, $matches);
+        $g = intval($matches[1]);
+        $m = intval($matches[2]);
+
+        $e = $m * time() + 60 * 60 * 24 * 30;
+        $new = new DB($db);
+        $user = $new->getUser($chat_id);
+        $wallet = $new->getWallet($user->id);
+        $price = 0 * $g; // Assuming 10000 Toman for 5GB
+        if ($wallet->balance >= $price) {
+
+            $new->updateWallet($user->id, $wallet->balance - $price, time(), $price);
+
+            $new->createSub($user->id, $user->username, $g, $e);
+
+
+            $option = array(
+                //First row
+                array($telegram->buildInlineKeyBoardButton('🚀 کانفیگ های من ', '', '/user_subs')),
+                //Second row
+                array($telegram->buildInlineKeyBoardButton('🔙 بازگشت', '', '/buy_sub'))
+            );
+            $keyb = $telegram->buildInlineKeyBoard($option);
+            $content = array(
+                'chat_id' => $chat_id,
+                'reply_markup' => $keyb,
+                'text' => 'خرید شما با موفقیت انجام شد.' . "\n" . 'مبلغ : ' . $price . ' تومان' . "\n" . 'پلن : ' . "$g گیگابایت , " . "$m ماهه" . "\n" . 'تاریخ انقضا : ' . date('Y-m-d H:i:s', time() + 60 * 60 * 24 * 30 * $m),
+                'message_id' => $result['callback_query']['message']['message_id']
+            );
+            $telegram->editMessageText($content);
+        } else {
+            $content = array('chat_id' => $chat_id, 'text' => 'موجودی کیف پول شما کافی نیست.' . "\n" . 'لطفا از منوی کیف پول اقدام به افزایش اعتبار کنید.', 'message_id' => $result['callback_query']['message']['message_id']);
+            $telegram->editMessageText($content);
+        }
+    }
+
     $content = array('chat_id' => $chat_id, 'text' => 'Invalid Command');
     $telegram->sendMessage($content);
 }
