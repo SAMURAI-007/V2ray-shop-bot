@@ -16,7 +16,7 @@ class DB
 
     public function getUser($chat_id)
     {
-        $stmt = $this->db->prepare("SELECT * FROM users WHERE chat_id = :chat_id");
+        $stmt = $this->db->prepare("SELECT * FROM users WHERE chat_id = :chat_id OR id = :chat_id");
         $stmt->bindParam(':chat_id', $chat_id);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_OBJ);
@@ -32,10 +32,6 @@ class DB
     public function createUser($username, $chat_id)
     {
         $ref_id = intval($chat_id * 2 / 100);
-
-        $stmt = $this->db->prepare("SELECT * FROM users WHERE chat_id = :chat_id");
-        $stmt->bindParam(':chat_id', $chat_id);
-        $stmt->execute();
 
         $stmt = $this->db->prepare("INSERT INTO users (username,chat_id,ref_id) VALUES (:username,:chat_id,:ref_id)");
         $stmt->bindParam(':username', $username);
@@ -66,6 +62,13 @@ class DB
         $stmt->bindParam(':user_id', $user_id);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function getAllWallets()
+    {
+        $stmt = $this->db->prepare("SELECT * FROM wallet");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function updateWallet($user_id, $balance, $updated_at, $last)

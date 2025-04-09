@@ -24,6 +24,13 @@ if (isset($_GET['sub_id'])) {
     header("Location: admin.php");
     exit;
 }
+if (isset($_POST['add_balance'])) {
+    $user_id = $_POST['user_id'];
+    $amount = $_POST['amount'];
+    $db->updateWallet($user_id, $amount, time(), $amount);
+    header("Location: admin.php");
+    exit;
+}
 
 
 ?>
@@ -40,7 +47,7 @@ if (isset($_GET['sub_id'])) {
 <body>
     <h1>Naya VPN bot admin panel</h1>
     <div class="container mt-5 border border-primary p-4 rounded shadow">
-        <h2>Users & subs</h2>
+        <h2>Users & Wallets</h2>
         <table class="table table-striped">
             <thead>
                 <tr>
@@ -57,21 +64,51 @@ if (isset($_GET['sub_id'])) {
                 foreach ($users as $user) {
                     $subs = $db->getSub($user->id);
                     foreach ($subs as $sub) {
-                        ?>
-                            <tr>
-                                <td><?php echo $user->username; ?></td>
-                                <td><?php echo $sub->sub_url; ?></td>
-                                <td><?php echo $sub->exp_date; ?></td>
-                                <td><?php echo $sub->data_limit; ?></td>
-                                <td><a href="admin.php?sub_id=<?php echo $sub->id; ?>" class="btn btn-danger">Delete</a></td>
-                            </tr>
-                        <?php
+                ?>
+                        <tr>
+                            <td><?php echo $user->username; ?></td>
+                            <td><?php echo $sub->sub_url; ?></td>
+                            <td><?php echo $sub->exp_date; ?></td>
+                            <td><?php echo $sub->data_limit; ?></td>
+                            <td><a href="admin.php?sub_id=<?php echo $sub->id; ?>" class="btn btn-danger">Delete</a></td>
+                        </tr>
+                <?php
                     }
                 }
                 ?>
             </tbody>
-
     </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Wallet User</th>
+                <th>Balance</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            $wallets = $db->getAllWallets();
+            foreach ($wallets as $wallet) {
+                $user = $db->getUser($wallet->user_id);
+            ?>
+                <tr>
+                    <td><?php echo $user->username; ?></td>
+                    <td><?php echo $wallet->balance; ?></td>
+                    <td>
+                        <form method="POST" action="admin.php" class="form-control w-50">
+                            <input class="input-sm rounded" type="text" placeholder="Amount" name="amount" required>
+                            <input type="hidden" name="user_id" value="<?php echo $wallet->user_id; ?>">
+                            <input type="submit" class="btn btn-sm btn-warning rounded" value="Add-Balance" name="add_balance">
+                        </form>
+                    </td>
+                </tr>
+            <?php
+            }
+            ?>
+        </tbody>
+    </table>
+
 
 </body>
 

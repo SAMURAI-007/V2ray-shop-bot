@@ -1,0 +1,19 @@
+============[Date]============
+[ 2025-04-09 17:42:36  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+curl_error_code:		7
+curl_error:		Failed to connect to api.telegram.org port 443 after 3390 ms: Couldn't connect to server
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(478): Telegram->sendMessage(Array)
+#4 {main}
+

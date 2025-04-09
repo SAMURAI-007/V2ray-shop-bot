@@ -94,3 +94,22 @@ ref.message_id= 196
 #3 C:\xampp\htdocs\public\index.php(267): Telegram->editMessageText(Array)
 #4 {main}
 
+============[Date]============
+[ 2025-04-06 12:14:42  Europe/Berlin ] 
+==========[Response]==========
+ok:			False
+error_code:		400
+description:		Bad Request: chat_id is empty
+=========[Sent Data]==========
+[ref]
+ref.chat_id= 
+ref.text= Invalid Command
+
+
+============[Trace]===========
+#0 C:\xampp\htdocs\public\Telegram.php(1862): TelegramErrorLogger::log(Array, Array)
+#1 C:\xampp\htdocs\public\Telegram.php(124): Telegram->sendAPIRequest('https://api.tel...', Array)
+#2 C:\xampp\htdocs\public\Telegram.php(182): Telegram->endpoint('sendMessage', Array)
+#3 C:\xampp\htdocs\public\index.php(478): Telegram->sendMessage(Array)
+#4 {main}
+

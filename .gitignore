@@ -1,0 +1,21 @@
+# Ignore SQLite database file
+/data.sqlite
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore environment files
+.env
+
+# Ignore vendor directory (if using Composer)
+vendor/
+
+# Ignore node_modules (if using Node.js)
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore cache files
+cache/

@@ -87,7 +87,7 @@ if ($text == "/user_ac") {
     $keyb = $telegram->buildInlineKeyBoard($option);
 
     $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => '👤 نام کاربری : ' . $user->username . "\n" . '▫️ ایدی کاربری : ' . $user->chat_id . "\n" . '✳️ تعداد رفرال : ' . '0'
-        . "\n\n" . '0' . 'گزینه های بیشتر 👇', 'message_id' => $result['callback_query']['message']['message_id']);
+        . "\n\n" . 'گزینه های بیشتر 👇', 'message_id' => $result['callback_query']['message']['message_id']);
     $telegram->editMessageText($content);
 }
 
@@ -446,7 +446,7 @@ if (!$validCommand) {
         $new = new DB($db);
         $user = $new->getUser($chat_id);
         $wallet = $new->getWallet($user->id);
-        $price = 0 * $g; // Assuming 10000 Toman for 5GB
+        $price = 2000 * $g + $m * 20000; // Assuming 10000 Toman for 5GB
         if ($wallet->balance >= $price) {
 
             $new->updateWallet($user->id, $wallet->balance - $price, time(), $price);
