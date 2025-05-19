@@ -35,7 +35,7 @@ if ($text == "/start") {
         $new->createUser($name, $chat_id);
         $new->createWallet($new->getUser($chat_id)->id, time());
     } else {
-        $new->updateUser($name, $chat_id);
+        $new->updateUser($name, $chat_id, 0, null);
     }
 
     // $new->deleteUser($chat_id);
@@ -49,7 +49,6 @@ if ($text == "/start") {
 
     $content = array('chat_id' => $chat_id, 'text' => 'Welcome ! Lets start the bot', 'reply_markup' => $keyb);
     $telegram->sendMessage($content);
-
 }
 
 if ($text == "/home") {
@@ -142,63 +141,9 @@ if ($text == "/deposited") {
     );
     $keyb = $telegram->buildInlineKeyBoard($option);
 
-    $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => 'افزایش موجودی کیف پول 💰' . "\n\n" . 'برای افزایش موجودی , مبلغ را به شماره کارت زیر واریز کرده و رسید پرداختی را برای پشتیبانی ارسال کنید.' . "\n\n" . '0000 0000 0000 0000', 'message_id' => $result['callback_query']['message']['message_id']);
+    $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => 'افزایش موجودی کیف پول 💰' . "\n\n" . 'برای افزایش موجودی , مبلغ را به شماره کارت زیر واریز کرده و رسید پرداختی را برای پشتیبانی ارسال کنید.' . "\n\n" . '6219 8619 3263 9601', 'message_id' => $result['callback_query']['message']['message_id']);
     $telegram->editMessageText($content);
 }
-// if ($text == "/deposit_20000") {
-//     $validCommand = true;
-
-//     $new = new DB($db);
-//     $user = $new->getUser($chat_id);
-//     $wallet = $new->getWallet($user->id);
-
-//     $new->updateWallet($user->id, $wallet->balance + 20000, time());
-
-//     $option = array(
-//         //First row
-//         array($telegram->buildInlineKeyBoardButton('🔙 بازگشت', '', '/user_wallet'))
-//     );
-//     $keyb = $telegram->buildInlineKeyBoard($option);
-
-//     $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => 'افزایش موجودی کیف پول 💰' . "\n\n" . 'موجودی شما با موفقیت افزایش یافت.' . "\n\n" . '💳 موجودی فعلی : ' . ($wallet->balance + 10000) . "\n" . '📥 اخرین واریز شما : ' . date('Y-m-d H:i:s', time()), 'message_id' => $result['callback_query']['message']['message_id']);
-//     $telegram->editMessageText($content);
-// }
-// if ($text == "/deposit_50000") {
-//     $validCommand = true;
-
-//     $new = new DB($db);
-//     $user = $new->getUser($chat_id);
-//     $wallet = $new->getWallet($user->id);
-
-//     $new->updateWallet($user->id, $wallet->balance + 50000, time());
-
-//     $option = array(
-//         //First row
-//         array($telegram->buildInlineKeyBoardButton('🔙 بازگشت', '', '/user_wallet'))
-//     );
-//     $keyb = $telegram->buildInlineKeyBoard($option);
-
-//     $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => 'افزایش موجودی کیف پول 💰' . "\n\n" . 'موجودی شما با موفقیت افزایش یافت.' . "\n\n" . '💳 موجودی فعلی : ' . ($wallet->balance + 20000) . "\n" . '📥 اخرین واریز شما : ' . date('Y-m-d H:i:s', time()), 'message_id' => $result['callback_query']['message']['message_id']);
-//     $telegram->editMessageText($content);
-// }
-// if ($text == "/deposit_100000") {
-//     $validCommand = true;
-
-//     $new = new DB($db);
-//     $user = $new->getUser($chat_id);
-//     $wallet = $new->getWallet($user->id);
-
-//     $new->updateWallet($user->id, $wallet->balance + 100000, time());
-
-//     $option = array(
-//         //First row
-//         array($telegram->buildInlineKeyBoardButton('🔙 بازگشت', '', '/user_wallet'))
-//     );
-//     $keyb = $telegram->buildInlineKeyBoard($option);
-
-//     $content = array('chat_id' => $chat_id, 'reply_markup' => $keyb, 'text' => 'افزایش موجودی کیف پول 💰' . "\n\n" . 'موجودی شما با موفقیت افزایش یافت.' . "\n\n" . '💳 موجودی فعلی : ' . ($wallet->balance + 50000) . "\n" . '📥 اخرین واریز شما : ' . date('Y-m-d H:i:s', time()), 'message_id' => $result['callback_query']['message']['message_id']);
-//     $telegram->editMessageText($content);
-// }
 
 
 if ($text == "/refferal") {
@@ -228,7 +173,7 @@ if ($text == "/user_subs") {
 
     if (isset($subs)) {
         foreach ($subs as $sub) {
-            $content .= '💳 پلن شما : ' . $sub->sub_url . "\n\n" . '📅 تاریخ انقضا : ' . date('Y-m-d H:i:s', $sub->exp_date) . "\n".'حجم :'.$sub->data_limit."\n\n"."";
+            $content .= '💳 پلن شما : ' . $sub->sub_url . "\n\n" . '📅 تاریخ انقضا : ' . date('Y-m-d H:i:s', $sub->exp_date) . "\n" . 'حجم :' . $sub->data_limit . "\n\n" . "";
         }
     } else {
         $content = 'شما هیچ کانفیگی ندارید.';
@@ -446,7 +391,7 @@ if (!$validCommand) {
         $new = new DB($db);
         $user = $new->getUser($chat_id);
         $wallet = $new->getWallet($user->id);
-        $price = 2000 * $g + $m * 20000; // Assuming 10000 Toman for 5GB
+        $price = 2000 * $g + $m * 2000; // Assuming 10000 Toman for 5GB
         if ($wallet->balance >= $price) {
 
             $new->updateWallet($user->id, $wallet->balance - $price, time(), $price);
@@ -474,6 +419,35 @@ if (!$validCommand) {
         }
     }
 
-    $content = array('chat_id' => $chat_id, 'text' => 'Invalid Command');
-    $telegram->sendMessage($content);
+    if (str_contains($text, "/start")) {
+        if (preg_match('/^\/start\s+(\w+)/', $text, $matches)) {
+            $validCommand = true;
+            $ref_id = $matches[1];
+
+            $new = new DB($db);
+            $ref_user = $new->getUserByRefId($ref_id);
+            $user = $new->getUser($chat_id);
+            if ($ref_user) {
+                if ($user->$is_ref == null) {
+                    $new->updateUser($user->username, $chat_id,0,$ref_user->id);
+                }
+                $content = array(
+                    'chat_id' => $chat_id,
+                    'text' => "کاربر معرف پیدا شد",
+                    'message_id' => $result['callback_query']['message']['message_id']
+                );
+                $telegram->sendMessage($content);
+            } else {
+                $content = array(
+                    'chat_id' => $chat_id,
+                    'text' => "کاربر معرف یافت نشد.",
+                    'message_id' => $result['callback_query']['message']['message_id']
+                );
+                $telegram->sendMessage($content);
+            }
+        }
+    } else {
+        $content = array('chat_id' => $chat_id, 'text' => 'Invalid Command');
+        $telegram->sendMessage($content);
+    }
 }

@@ -22,6 +22,14 @@ class DB
         return $stmt->fetch(PDO::FETCH_OBJ);
     }
 
+    public function getUserByRefId($ref_id)
+    {
+        $stmt = $this->db->prepare("SELECT * FROM users WHERE ref_id = :ref_id");
+        $stmt->bindParam(':ref_id', $ref_id);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_OBJ);
+    }
+
     public function getAllUsers()
     {
         $stmt = $this->db->prepare("SELECT * FROM users");
@@ -40,10 +48,12 @@ class DB
         $stmt->execute();
     }
 
-    public function updateUser($username, $chat_id)
+    public function updateUser($username, $chat_id,$refs,$is_ref)
     {
-        $stmt = $this->db->prepare("UPDATE users SET chat_id = :chat_id, username = :username WHERE chat_id = :chat_id");
+        $stmt = $this->db->prepare("UPDATE users SET chat_id = :chat_id, username = :username, refs = :refs, is_ref = :is_ref WHERE chat_id = :chat_id");
         $stmt->bindParam(':chat_id', $chat_id);
+        $stmt->bindParam(':refs', $refs);
+        $stmt->bindParam(':is_ref', $is_ref);
         $stmt->bindParam(':username', $username);
         $stmt->execute();
     }
